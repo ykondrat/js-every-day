@@ -1,0 +1,41 @@
+body {
+    background-image: url('http://az616578.vo.msecnd.net/files/2016/10/01/636108860252148978-1300994373_adam-elmakias-08.jpg');
+}
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    color: #88c780;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+}
+.drum {
+    margin-top: 20px;
+}
+.up, .down {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.key {
+    border: 4px solid black;
+    border-radius: 8px;
+    -webkit-transition: all .09s;
+    transition: all .09s;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 5px black;
+    color: white;
+    height: 100px;
+    text-align: center;
+    padding-top: 20px;
+}
+kbd {
+    background-color: #88c780;
+    font-weight: bold;
+}
+
+.playing {
+    -webkit-transform: scale(2);
+    transform: scale(1.2);
+    border-color: #88c780;
+    -webkit-box-shadow: 0 0 10px #88c780;
+    box-shadow: 0 0 10px #88c780;
+}
