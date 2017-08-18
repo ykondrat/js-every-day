@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Key Detection</title>
+</head>
+<body>
+	<script src="http://www.cornify.com/js/cornify.js"></script>
+	<script>
+		const pressed = [];
+		const secretCode = 'ykondrat';
+
+		window.addEventListener('keyup', (event) => {
+			pressed.push(event.key);
+			pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+
+			if (pressed.join('').includes(secretCode)) {
+				cornify_add();
+			}
+		});
+	</script>
+</body>
+</html>
