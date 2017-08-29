@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Reference VS Copy</title>
+</head>
+<body>
+	<script>
+		// String, number, boolean
+		let age = 100;
+		let age2 = age;
+
+		console.log(age, age2);
+		age = 200;
+		console.log(age, age2);
+
+		// Array
+		const players = ['Ykondrat', 'Sandruse', 'Mvorona', 'Egaraul'];
+		const team = players; // just like a pinter
+		const team2 = players.slice();
+		const team3 = [].concat(players);
+		const team4 = [...players]; // spread
+		const team5 = Array.from(players);
+
+		console.log(players, team);
+		team[0] = 'ykondrat';
+		console.log(players, team);
+		console.log(team2, team3, team4);
+
+		// Object
+		const person = {
+			name: 'ykondrat',
+			age: 24
+		};
+
+		const cap2 = Object.assign({}, person, { number: 99}); // makes copy only of first level
+		console.log(cap2, person);
+
+		const captain = person; // just like a pinter
+		//captain.number = 99;
+		
+		const dev = {
+			name: 'ykondrat',
+			age: 24,
+			social: {
+				facebook: '@ykondrat',
+				gmail: 'gmail.com'
+			}
+		}
+
+		const dev2 = JSON.parse(JSON.stringify(dev)); // makes clone of obj on all lvl
+		console.log(dev2);
+
+	</script>
+</body>
+</html>
